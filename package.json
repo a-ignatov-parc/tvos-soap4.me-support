@@ -1,0 +1,26 @@
+{
+  "name": "tvos-soap4.me-support",
+  "version": "1.0.0",
+  "description": "Support page for App Store",
+  "main": "index.js",
+  "engine-strict": true,
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-ignatov-parc/tvos-soap4.me-support.git"
+  },
+  "author": "Anton Ignatov <abietis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-ignatov-parc/tvos-soap4.me-support/issues"
+  },
+  "homepage": "https://github.com/a-ignatov-parc/tvos-soap4.me-support#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

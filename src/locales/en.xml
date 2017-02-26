@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xsl:stylesheet SYSTEM "src/entities.dtd">
+
+<locale lang="en">
+	<page-title>
+		Support page&nbsp;&mdash; soap4.me
+	</page-title>
+	<app-link>
+		https://itunes.apple.com/en/app/xxx/id1234567890
+	</app-link>
+	<title>
+		soap4.me for tv
+	</title>
+	<description>
+		If&nbsp;you have any questions, problems or&nbsp;ideas about some improvements to&nbsp;soap4.me please don&rsquo;t hesitate to&nbsp;<a class="content-link" href="mailto:abietis@gmail.com?subject=[soap4.me] Support">write a&nbsp;letter to&nbsp;developer</a>.
+	</description>
+	<footer>
+		Sincere,
+		<br />
+		Anton Ignatov
+	</footer>
+</locale>

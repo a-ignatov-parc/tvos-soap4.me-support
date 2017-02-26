@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xsl:stylesheet SYSTEM "src/entities.dtd">
+
+<locale lang="ru">
+	<page-title>
+		Страница поддержки&nbsp;&mdash; soap4.me
+	</page-title>
+	<app-link>
+		https://itunes.apple.com/ru/app/xxx/id1234567890
+	</app-link>
+	<title>
+		soap4.me для tv
+	</title>
+	<description>
+		Если у&nbsp;вас возникли какие-то вопросы, проблемы или предложения по&nbsp;развитию приложения soap4.me, вы&nbsp;можете <a class="content-link" href="mailto:abietis@gmail.com?subject=[soap4.me] Support">связаться с&nbsp;разработчиком</a> и&nbsp;получить ответ в&nbsp;кратчайшие сроки.
+	</description>
+	<footer>
+		С&nbsp;уважением,
+		<br />
+		Антон Игнатов
+	</footer>
+</locale>

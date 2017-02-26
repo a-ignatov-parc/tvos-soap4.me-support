@@ -24,6 +24,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-less": "^3.3.0",
-    "gulp-plumber": "^1.1.0"
+    "gulp-plumber": "^1.1.0",
+    "libxslt-prebuilt": "InnovaCo/libxslt-prebuilt#v0.5.5"
   }
 }

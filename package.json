@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/a-ignatov-parc/tvos-soap4.me-support#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-plumber": "^1.1.0"
   }
 }

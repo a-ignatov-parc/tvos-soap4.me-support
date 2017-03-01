@@ -4,10 +4,10 @@
 	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 >
-	<xsl:import href="helpers/html.xsl" />
+	<xsl:import href="src/helpers/html.xsl" />
 
-	<xsl:import href="widgets/html.xsl" />
-	<xsl:import href="widgets/content.xsl" />
+	<xsl:import href="src/widgets/html.xsl" />
+	<xsl:import href="src/widgets/content.xsl" />
 
 	<xsl:output
 		omit-xml-declaration="yes"

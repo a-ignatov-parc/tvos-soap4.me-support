@@ -1,8 +1,9 @@
 'use strict';
 
+const fs = require('fs');
 const path = require('path');
 const stream = require('stream');
-const libxslt = require('libxslt-prebuilt');
+const libxslt = require('libxslt');
 
 const libxmljs = libxslt.libxmljs;
 
@@ -26,9 +27,13 @@ function consumeBuffer(done) {
 module.exports = function xslt(stylesheetPath, xslParams) {
 	const options = Object.assign({}, defaults, {xslParams});
 	const stylesheetResolver = new Promise((resolve, reject) => {
-		libxslt.parseFile(stylesheetPath, options, function(err, stylesheet) {
-			if (err) return reject(err);
-			resolve(stylesheet);
+		fs.readFile(stylesheetPath, (error, stylesheetString) => {
+			if (error) return reject(error);
+			const stylesheetObj = libxmljs.parseXml(stylesheetString, options);
+			libxslt.parse(stylesheetObj, (error, stylesheet) => {
+				if (error) return reject(error);
+				resolve(stylesheet);
+			});
 		});
 	});
 
@@ -69,8 +74,17 @@ module.exports = function xslt(stylesheetPath, xslParams) {
 					const stylesheet = results[1];
 					const params = Object.assign(xslParams, options.xslParams);
 					const document = libxmljs.parseXmlString(content, options);
-					if (document.errors.length) return Promise.reject(document.errors);
-					return stylesheet.apply(document, params, {outputFormat: 'string'});
+
+					if (document.errors.length) {
+						return Promise.reject(document.errors);
+					}
+
+					return new Promise((resolve, reject) => {
+						stylesheet.apply(document, params, {outputFormat: 'string'}, (error, result) => {
+							if (error) return reject(error);
+							resolve(result);
+						});
+					});
 				})
 				.then(result => {
 					file.contents = new Buffer(result);

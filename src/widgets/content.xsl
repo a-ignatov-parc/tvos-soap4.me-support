@@ -7,8 +7,9 @@
 	<xsl:template match="locale">
 		<div class="banner">
 			<a target="_blank">
-				<xsl:attribute name="no-href">
-					<xsl:value-of select="/locale/app-link" />
+				<xsl:attribute name="href">
+					<xsl:variable name="link-href" select="normalize-space(app-link)" />
+					<xsl:value-of select="$link-href" />
 				</xsl:attribute>
 				<i class="app-icon app-icon--shadow"></i>
 			</a>

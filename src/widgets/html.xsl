@@ -13,7 +13,8 @@
 			<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 				<title>
-					<xsl:value-of select="/locale/page-title" />
+					<xsl:variable name="title" select="normalize-space(/locale/page-title)" />
+					<xsl:value-of select="$title" />
 				</title>
 				<link rel="shortcut icon" href="../assets/images/favicon.png" />
 				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
